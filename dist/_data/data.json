@@ -1,0 +1,28 @@
+{
+	"title" : "Exercise 1 : Web Design Day : Pattern Lab",
+	"htmlClass": "pl",
+	"bodyClass": "body",
+	"img": {
+		"landscape": {
+			"src": "../../images/sample/fpo_16x9.png",
+			"alt": "16x9 Image"
+		},
+		"transom": {
+			"src": "../../images/sample/transom.svg",
+			"alt": "Transom Flare"
+		}
+	},
+	"siteTitle": "Site Name",
+	"pageTitle": "Page Name",
+	"edition": "27",
+	"logo": "../../images/old-street-lamp.png",
+	"author": "Oscar Wilde",
+	"finePrint": "Hand made with Pattern Lab. Oscar Wilde description courtesy Wikipedia. Vectors: retrovectors.com",
+	"caption": "Web Design Day 2016",
+	"captionLink": "http://webdesignday.com/",
+	"description" : "Those who find ugly meanings in beautiful things are corrupt without being charming. This is a fault. Those who find beautiful meanings in beautiful things are the cultivated. For these there is hope. They are the elect to whom beautiful things mean only Beauty. There is no such thing as a moral or an immoral book. Books are well written, or badly written. That is all.",
+	"buttonTitle": "Hover text",
+	"type": "",
+	"buttonText": "Submit",
+	"manuscriptText": "If one cannot enjoy reading a book over and over again, there is no use in reading it at all. \rWe are all in the gutter, but some of us are looking at the stars.\rThe truth is rarely pure and never simple.\rMost people are other people. Their thoughts are someone else's opinions, their lives a mimicry, their passions a quotation."
+}
