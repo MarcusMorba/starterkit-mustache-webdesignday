@@ -16,7 +16,14 @@
 	"pageTitle": "Page Name",
 	"edition": "27",
 	"logo": "../../images/old-street-lamp.png",
-	"author": "Oscar Wilde",
+	"author": "Author",
+	"hero" :  {
+		"intro": "A short phrase",
+		"preposition": "about",
+		"name" : "COOL<br/>PERSON",
+		"detail": "A never before seen series",
+		"callText": "Explore Now &rarr;"
+	},
 	"finePrint": "Hand made with Pattern Lab. Oscar Wilde description courtesy Wikipedia. Vectors: retrovectors.com",
 	"caption": "Web Design Day 2016",
 	"captionLink": "http://webdesignday.com/",

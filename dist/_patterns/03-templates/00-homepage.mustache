@@ -1,7 +1,9 @@
 <div class="container">
   {{> organisms-masthead }}
   <main role="main">
-    {{> molecules-block-hero }}
+    {{#hero}}
+    {{> molecules-block-hero:oscar }}
+    {{/hero}}
     {{> atoms-paragraph }}
     {{> atoms-paragraph(description: 'Browse selected work below.') }}
     <div class="region region__work-list">
