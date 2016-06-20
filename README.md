@@ -31,7 +31,7 @@ The gist is, from a command prompt:
 
 ``` bash
 npm install pattern-lab/starterkit-mustache-webdesignday#exercise1start
-gulp patternlab:loadstarterkit --kit=starterkit-mustache-webdesignday#exercise1start --clean=true
+gulp patternlab:loadstarterkit --kit=starterkit-mustache-webdesignday --clean=true
 ```
 
 Follow instructions as defined on the wiki: [https://github.com/pattern-lab/patternlab-node/wiki/Importing-Starterkits](https://github.com/pattern-lab/patternlab-node/wiki/Importing-Starterkits).

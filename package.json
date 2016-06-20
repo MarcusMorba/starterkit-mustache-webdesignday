@@ -1,10 +1,10 @@
 {
-  "name": "starterkit-mustache-webdesignday-complete",
+  "name": "starterkit-mustache-webdesignday",
   "version": "0.1.0",
   "description": "The complete mustache pattern tree for the Atomic Design / Pattern Lab work shop at Web Design Day 2016",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pattern-lab/starterkit-mustache-webdesignday-complete.git"
+    "url": "git+https://github.com/pattern-lab/starterkit-mustache-webdesignday.git"
   },
   "keywords": [
     "Pattern Lab",
@@ -16,7 +16,7 @@
   "author": "Brian Muenzenmeyer",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pattern-lab/starterkit-mustache-webdesignday-complete/issues"
+    "url": "https://github.com/pattern-lab/starterkit-mustache-webdesignday/issues"
   },
   "homepage": "https://github.com/pattern-lab/webdesignday-2016"
 }
