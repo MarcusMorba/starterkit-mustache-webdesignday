@@ -2,8 +2,6 @@
 	"title" : "Exercise 1 : Web Design Day : Pattern Lab",
 	"htmlClass": "pl",
 	"bodyClass": "body",
-	"siteTitle": "Site Name",
-	"pageTitle": "Page Name",
 	"hero" :  {
 		"intro": "A short phrase",
 		"preposition": "about",
@@ -30,5 +28,4 @@
 			"alt": "The Site Logo"
 		}
 	},
-	"finePrint": "Hand made with Pattern Lab. Check the README for more info."
 }
