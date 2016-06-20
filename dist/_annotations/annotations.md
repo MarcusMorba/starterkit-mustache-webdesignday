@@ -1,5 +1,5 @@
 ---
-selector: ".selector"
-title: "Title"
+selector: "#colors"
+title: "Special Markup and Styling"
 ---
-Markdown
+This code uses pattern-scaffolding.css in the `source/css/` directory.
