@@ -1,10 +1,8 @@
+@charset "UTF-8";
 /*------------------------------------*\
     $RESET
 \*------------------------------------*/
-
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -20,30 +18,48 @@ header, footer, nav, section, article, hgroup, figure {
 /*------------------------------------*\
     $SIMPLE ELEMENTS
 \*------------------------------------*/
-
 /* CSS Preprocessors Out of Scope
   BLACK: #0B0F0C;
   GREY: #636872;
   WHITE: #F4F2F0;
-  YELLOW: #C09923;
   ORANGE: #D16624;
+  DARKORANGE: #FF8C00;
+  LIGHTORANGE: #FFA500;
 */
 
-body {
-  background-color: #F4F2F0;
-  border-top: 8px solid #C09923;
-  font: 18px/1.5 "butlerregular", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-  -webkit-text-size-adjust: 100%;
-  color: #0B0F0C;
-  overflow-x: hidden;
+:root {
+  --text-color: #0B0F0C;
+  --soft-grey: #636872;
+  --soft-white: #F4F2F0;
+  --primary: #D16624;
+  --primary-dark: #FF8C00;
+  --primary-light: #FFA500;
 }
 
-h1, h2, h3, h4, h5, h6
-{
+body {
+  font: 18px/1.5 "butlerregular", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  overflow-x: hidden;
+  background-color: #F4F2F0;
+  background-color: var(--soft-white);
+  border-top: 8px solid #C09923;
+  border-top: 8px solid var(--soft-grey);
+  -webkit-text-size-adjust: 100%;
+  color: #0B0F0C;
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "butlerextrabold", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   line-height: 1.2;
 }
 
@@ -57,35 +73,49 @@ strong,
 }
 
 em,
-.font-light{
+.font-light {
   font-family: "butlerultralight";
 }
 
-a{
+a {
   color: #D16624;
+  color:  var(--primary);
 }
 
-button{
+a:hover{
+  color: #C09923;
+  color:  var(--primary-dark);
+}
+
+button {
   padding: 5px 8px;
   border-radius: 3px;
   color: #fff;
-  background: darkorange;
+  background: #FF8C00;
+  background: var(--primary-dark);
   border: 1px solid #D16624;
+  border: 1px solid var(--primary);
   border-bottom-width: 3px;
   font-size: 1.25rem;
   margin: .5rem auto;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
   background: orange;
+  background: var(--primary-light);
 }
 
-button ~ button{
+button:active{
+  position: relative;
+  top: 1px;
+}
+
+button ~ button {
   margin-left: .5rem;
 }
 
-input{
+input {
   line-height: 1.2;
   text-indent: 3px;
   padding: 5px;
@@ -96,16 +126,20 @@ hr {
   border: 0;
   height: 2px;
   background: #eeeeee;
+  background: var(--soft-grey);
   margin: 2rem 0;
 }
 
-ol, ul {
+ol,
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-img, video, object {
+img,
+video,
+object {
   max-width: 100%;
   height: auto;
 }
@@ -113,28 +147,14 @@ img, video, object {
 /*------------------------------------*\
     $SITE PARTS
 \*------------------------------------*/
-
-.manuscript{
-  max-width: 100%;
-  padding: 1rem .25rem;
-  font-family: inherit;
-  white-space: pre-wrap;
-  /* technique demoed by Chris Coyier at  http://codepen.io/chriscoyier/pen/EyYgvQ */
-  font-size: calc(1rem + 1vw);
-  line-height: calc(1.2rem + 1vw);
+.block {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 32%;
+      -ms-flex: 0 1 32%;
+          flex: 0 1 32%;
 }
 
-.blockset{
-  display: flex;
-  justify-content: space-between;
-  margin: 3rem auto;
-}
-
-.block{
-  flex: 0 1 32%;
-}
-
-.block img{
+.block img {
   display: block;
 }
 
@@ -143,12 +163,17 @@ img, video, object {
   max-width: 100%;
   position: relative;
   height: 500px;
+  background: url(../../images/sample/transom.svg);
+  background-size: cover;
+}
+
+.block__hero.oscar{
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/94505/pattern.svg), url(../../images/london2.jpg);
   background-position: center center;
   background-size: 100%;
-  background-size: cover;
   background-blend-mode: screen;
 }
+
 
 .block__hero .block--title {
   position: absolute;
@@ -164,17 +189,19 @@ img, video, object {
   line-height: 1;
 }
 
-.block__hero .block--title--transition {
+.block__hero .block--title--preposition {
   font-weight: 400;
   font-size: 2rem;
   text-align: right;
   display: block;
   line-height: 1;
 }
-.block__hero .block--title--transition:before {
+
+.block__hero .block--title--preposition:before {
   content: '— ';
 }
-.block__hero .block--title--transition:after {
+
+.block__hero .block--title--preposition:after {
   content: ' —';
 }
 
@@ -193,137 +220,10 @@ img, video, object {
   font-size: 1.25rem;
 }
 
-.block__hero button {
+.block__hero .block--call {
   float: right;
 }
-
-.logo__small{
-  height: 80px;
-  float: left;
-}
-
-.nav {
-  display: flex;
-}
-
-.nav ul{
-  display: flex;
-  flex-direction: row;
-}
-
-.nav--link{
-  margin-right: .5rem;
-}
-
-.nav--secondary{
-  margin-left: auto;
-}
-
-.form{
-  margin: 1rem;
-}
-
-.form label{
-  display: block;
-}
-
-.form input,
-.form textarea{
-  display: block;
-  width: 100%;
-}
-
-/* http://blog.cloudfour.com/breaking-out-with-viewport-units-and-calc */
-.u-release{
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-}
-
-@media only screen and (min-width: 40em){
-  .u-release{
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-  }
-}
-
 
 /*------------------------------------*\
     $PAGE ELEMENTS
 \*------------------------------------*/
-
-.container{
-  max-width: 33.33333em; /* 600 / 18 */
-  margin: 0 auto;
-}
-
-@media only screen and (min-width: 60em){
-  .container{
-    max-width: 50em; /* 600 / 18 */
-    margin: 0 auto;
-  }
-}
-
-.masthead{
-  margin: 1rem auto;
-}
-
-.region{
-
-}
-
-.region__header{
-
-}
-
-.region__aside{
-
-}
-
-@media only screen and (min-width: 60em){
-  .region__aside{
-    width: 10vw;
-    margin: 5rem 1rem 1rem;
-    transform: translateX(3%);
-    position: absolute;
-  }
-}
-
-.region--title{
-  margin-bottom: 0;
-  border-bottom: 1px solid black;
-}
-
-.aside-capable{
-  display: flex;
-  flex-direction: column;
-}
-
-@media only screen and (min-width: 60em){
-  .aside-capable{
-    flex-direction: row;
-  }
-}
-
-.region__work-list .blockset{
-  flex-direction: column;
-}
-
-@media only screen and (min-width: 60em){
-  .region__work-list .blockset{
-    flex-direction: row;
-  }
-}
-
-
-
-.bigfoot{
-  border-top: 1px solid #C09923;
-  padding: 4rem 1rem 1rem 1rem;
-  margin-top: 1rem;
-  position: relative;
-  overflow-y: hidden;
-}
-
-.bigfoot .logo{
-  transform: translateY(50%);
-}
