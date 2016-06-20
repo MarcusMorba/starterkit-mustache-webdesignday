@@ -1,42 +1,10 @@
 {
 	"1": {
-		"img": {
-			"landscape": {
-				"src": "../../images/child.png",
-				"alt": "A child with her back turned"
-			}
-		},
-		"caption" : "Requiescat",
-		"captionLink" : "link.pages-work-requiescat"
 	},
 	"2": {
-		"img": {
-			"landscape": {
-				"src": "../../images/dappergentleman.png",
-				"alt": "a dapper gentleman"
-			}
-		},
-		"caption" : "The Harlot's House",
-		"captionLink" : "link.pages-work-the-harlots-house"
 	},
 	"3": {
-		"img": {
-			"landscape": {
-				"src": "../../images/eye.png",
-				"alt": "an eye"
-			}
-		},
-		"caption" : "Impression Du Matin",
-		"captionLink" : "link.pages-work-impression-du-matin"
 	},
 	"4": {
-		"img": {
-			"landscape": {
-				"src": "../../images/rural.png",
-				"alt": "a rural scene"
-			}
-		},
-		"caption" : "Symphony in Yellow",
-		"captionLink" : "link.pages-work-symphony-in-yellow"
 	}
 }
