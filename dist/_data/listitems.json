@@ -7,7 +7,7 @@
 			}
 		},
 		"caption" : "Requiescat",
-		"captionLink" : "Requiescat"
+		"captionLink" : "link.pages-work-requiescat"
 	},
 	"2": {
 		"img": {
@@ -17,7 +17,7 @@
 			}
 		},
 		"caption" : "The Harlot's House",
-		"captionLink" : "The Harlot's House"
+		"captionLink" : "link.pages-work-the-harlots-house"
 	},
 	"3": {
 		"img": {
@@ -27,7 +27,7 @@
 			}
 		},
 		"caption" : "Impression Du Matin",
-		"captionLink" : "Impression Du Matin"
+		"captionLink" : "link.pages-work-impression-du-matin"
 	},
 	"4": {
 		"img": {
@@ -37,6 +37,6 @@
 			}
 		},
 		"caption" : "Symphony in Yellow",
-		"captionLink" : "Symphony in Yellow"
+		"captionLink" : "link.pages-work-symphony-in-yellow"
 	}
 }
