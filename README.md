@@ -23,7 +23,9 @@ You can use starterkit loading commands to import starterkits.
 
 #### PHP
 
-Forthcoming
+``` bash
+php core/console --starterkit --install pattern-lab/starterkit-mustache-webdesignday#exercise1start
+```
 
 #### Node
 
