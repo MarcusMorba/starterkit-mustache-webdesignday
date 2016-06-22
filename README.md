@@ -29,7 +29,6 @@ php core/console --starterkit --install pattern-lab/starterkit-mustache-webdesig
 
 #### Node
 
-The gist is, from a command prompt:
 
 ``` bash
 npm install pattern-lab/starterkit-mustache-webdesignday#exercise1start
@@ -39,6 +38,7 @@ gulp patternlab:loadstarterkit --kit=starterkit-mustache-webdesignday --clean=tr
 Follow instructions as defined on the wiki: [https://github.com/pattern-lab/patternlab-node/wiki/Importing-Starterkits](https://github.com/pattern-lab/patternlab-node/wiki/Importing-Starterkits).
 
 * Sometimes users will run into file permissions issues. It's recommended to run all command prompts as administrator if you can.
+* The `clean` feature seems spotty at times. If it fails, delete the contents of your `source/` directory prior to load.
 
 #### Direct Downloads
 
