@@ -168,12 +168,11 @@ object {
 }
 
 .block__hero.oscar{
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/94505/pattern.svg), url(../../images/london2.jpg);
+  background: url(../../images/pattern-orange-triangles.svg), url(../../images/london2.jpg);
   background-position: center center;
   background-size: 100%;
   background-blend-mode: screen;
 }
-
 
 .block__hero .block--title {
   position: absolute;
