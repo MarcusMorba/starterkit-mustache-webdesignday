@@ -19,9 +19,6 @@ header, footer, nav, section, article, hgroup, figure {
     $SIMPLE ELEMENTS
 \*------------------------------------*/
 /* CSS Preprocessors Out of Scope
-
-
-
   BLACK: #0B0F0C;
   GREY: #636872;
   WHITE: #F4F2F0;
@@ -188,16 +185,16 @@ object {
   max-width: 100%;
   position: relative;
   height: 500px;
+  background: url(../../images/sample/transom.svg);
+  background-size: cover;
 }
 
 .block__hero.oscar{
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/94505/pattern.svg), url(../../images/london2.jpg);
+  background: url(../../images/pattern-orange-triangles.svg), url(../../images/london2.jpg);
   background-position: center center;
   background-size: 100%;
-  background-size: cover;
   background-blend-mode: screen;
 }
-
 
 .block__hero .block--title {
   position: absolute;
