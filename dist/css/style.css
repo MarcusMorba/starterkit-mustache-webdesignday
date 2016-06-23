@@ -6,42 +6,12 @@
   box-sizing: border-box;
 }
 
-html,
-body,
-div,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-ol,
-ul,
-li,
-form,
-legend,
-label,
-table,
-header,
-footer,
-nav,
-section,
-figure {
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
   margin: 0;
   padding: 0;
 }
 
-header,
-footer,
-nav,
-section,
-article,
-hgroup,
-figure {
+header, footer, nav, section, article, hgroup, figure {
   display: block;
 }
 
@@ -52,16 +22,30 @@ figure {
   BLACK: #0B0F0C;
   GREY: #636872;
   WHITE: #F4F2F0;
-  YELLOW: #C09923;
   ORANGE: #D16624;
+  DARKORANGE: #FF8C00;
+  LIGHTORANGE: #FFA500;
 */
+
+:root {
+  --text-color: #0B0F0C;
+  --soft-grey: #636872;
+  --soft-white: #F4F2F0;
+  --primary: #D16624;
+  --primary-dark: #FF8C00;
+  --primary-light: #FFA500;
+}
+
 body {
-  background-color: #F4F2F0;
-  border-top: 8px solid #C09923;
   font: 18px/1.5 "butlerregular", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  overflow-x: hidden;
+  background-color: #F4F2F0;
+  background-color: var(--soft-white);
+  border-top: 8px solid #C09923;
+  border-top: 8px solid var(--soft-grey);
   -webkit-text-size-adjust: 100%;
   color: #0B0F0C;
-  overflow-x: hidden;
+  color: var(--text-color);
 }
 
 h1,
@@ -95,14 +79,22 @@ em,
 
 a {
   color: #D16624;
+  color:  var(--primary);
+}
+
+a:hover{
+  color: #C09923;
+  color:  var(--primary-dark);
 }
 
 button {
   padding: 5px 8px;
   border-radius: 3px;
   color: #fff;
-  background: darkorange;
+  background: #FF8C00;
+  background: var(--primary-dark);
   border: 1px solid #D16624;
+  border: 1px solid var(--primary);
   border-bottom-width: 3px;
   font-size: 1.25rem;
   margin: .5rem auto;
@@ -111,6 +103,12 @@ button {
 button:hover {
   cursor: pointer;
   background: orange;
+  background: var(--primary-light);
+}
+
+button:active{
+  position: relative;
+  top: 1px;
 }
 
 button ~ button {
@@ -128,6 +126,7 @@ hr {
   border: 0;
   height: 2px;
   background: #eeeeee;
+  background: var(--soft-grey);
   margin: 2rem 0;
 }
 
@@ -186,16 +185,16 @@ object {
   max-width: 100%;
   position: relative;
   height: 500px;
+  background: url(../../images/sample/transom.svg);
+  background-size: cover;
 }
 
 .block__hero.oscar{
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/94505/pattern.svg), url(../../images/london2.jpg);
+  background: url(../../images/pattern-orange-triangles.svg), url(../../images/london2.jpg);
   background-position: center center;
   background-size: 100%;
-  background-size: cover;
   background-blend-mode: screen;
 }
-
 
 .block__hero .block--title {
   position: absolute;
@@ -256,6 +255,7 @@ object {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
 }
 
 .nav ul {
@@ -275,7 +275,16 @@ object {
 }
 
 .nav--secondary {
-  margin-left: auto;
+  margin-left: 0;
+}
+
+@media only screen and (min-width: 30em){
+  .nav {
+    flex-direction: row;
+  }
+  .nav--secondary{
+    margin-left: auto;
+  }
 }
 
 .form {
@@ -286,24 +295,11 @@ object {
   display: block;
 }
 
-.form input,
-.form textarea {
+.form input {
   display: block;
   width: 100%;
 }
 
-/* http://blog.cloudfour.com/breaking-out-with-viewport-units-and-calc */
-.u-release {
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-}
-
-@media only screen and (min-width: 70em) {
-  .u-release {
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-  }
-}
 /*------------------------------------*\
     $PAGE ELEMENTS
 \*------------------------------------*/
@@ -322,6 +318,17 @@ object {
 }
 .masthead {
   margin: 1rem auto;
+}
+
+main p {
+  padding: .5rem;
+}
+
+@media only screen and (min-width: 30em){
+  main p {
+    max-width: 33.3333rem; /* 600px / base font size  */
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (min-width: 60em) {
@@ -378,6 +385,7 @@ object {
 }
 .bigfoot {
   border-top: 1px solid #C09923;
+  border-top: 1px solid  var(--primary-dark);
   padding: 4rem 1rem 1rem 1rem;
   margin-top: 1rem;
   position: relative;
@@ -387,4 +395,22 @@ object {
 .bigfoot .logo {
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
+}
+
+.facebook{
+  background: #3b5998;
+  border-color: #8b9dc3;
+}
+
+.facebook:hover{
+  background: #3b5998;
+}
+
+.twitter{
+  background: #55acee;
+  border-color: #55acee;
+}
+
+.twitter:hover{
+  background: #55acee;
 }
